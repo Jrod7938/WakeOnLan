@@ -1,5 +1,6 @@
 plugins {
     kotlin("jvm") version "2.0.20"
+    application
 }
 
 group = "com.wol"
@@ -16,6 +17,25 @@ dependencies {
 tasks.test {
     useJUnitPlatform()
 }
+
 kotlin {
-    jvmToolchain(19)
+    jvmToolchain {
+        languageVersion.set(JavaLanguageVersion.of(11))
+    }
+}
+
+application {
+    mainClass.set("com.wol.MainKt")
+}
+
+tasks.jar {
+    manifest {
+        attributes(
+            "Main-Class" to "com.wol.MainKt"
+        )
+    }
+
+    from({
+        configurations.runtimeClasspath.get().map { if (it.isDirectory) it else zipTree(it) }
+    })
 }

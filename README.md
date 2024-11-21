@@ -9,7 +9,7 @@ This is a simple Kotlin program to send a Wake-on-LAN (WOL) magic packet to wake
 - Written in Kotlin for simplicity and portability.
 
 ## Requirements
-- **Java Runtime Environment (JRE) 19 or higher**
+- **Java Runtime Environment (JRE) 11 or higher**
 - **Kotlin Runtime**
 
 ## Usage
