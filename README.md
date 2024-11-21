@@ -27,7 +27,7 @@ java -jar WakeOnLan.jar <MAC Address> <Broadcast Address> <Port>
 
 ### Example
 ```sh
-java -jar WakeOnLan.jar "01:23:45:67:89:AB" "192.168.1.255" "9"
+java -jar WakeOnLan.jar 01:23:45:67:89:AB 192.168.1.255 9
 ```
 
 This command sends a WOL magic packet to the device with the MAC address `01:23:45:67:89:AB` on the broadcast address `192.168.1.255` using port `9`.
